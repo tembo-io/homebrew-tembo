@@ -6,7 +6,8 @@ class TemboCli < Formula
   @@release_version = "2024.3.29"
   if OS.mac?
 
-    if [[ "${UNAME_MACHINE}" == "arm64" ]]
+    uname = `/usr/bin/uname -m`
+    if uname.strip == "arm64"
       @@filename = "tembo-cli-#{version}-aarch64-apple.tar.gz"
       url "https://github.com/tembo-io/tembo/releases/download/#{@@release_version}/#{@@filename}"
       sha256 "1d522d419b370d92d6d68f1d95d652a3f98de0e0fdc45f1a7ca7590961f0e8d7"
