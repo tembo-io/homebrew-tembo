@@ -3,7 +3,7 @@ class TemboCli < Formula
   homepage "https://github.com/tembo-io/tembo/tree/main/tembo-cli"
   version "0.20.4"
   @@filename = nil
-  @@release_version = "2024.3.29"
+  @@release_version = "2024.04.22"
   if OS.mac?
 
     uname = `/usr/bin/uname -m`
