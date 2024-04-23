@@ -10,11 +10,11 @@ class TemboCli < Formula
     if uname.strip == "arm64"
       @@filename = "tembo-cli-#{version}-aarch64-apple.tar.gz"
       url "https://github.com/tembo-io/tembo/releases/download/#{@@release_version}/#{@@filename}"
-      sha256 ""
+      sha256 "06d282ba8b15552f10a29d06f217fb71f1e9be80869d77078653df2329aaea4e"
     else
       @@filename = "tembo-cli-#{version}-x86_64-apple.tar.gz"
       url "https://github.com/tembo-io/tembo/releases/download/#{@@release_version}/#{@@filename}"
-      sha256 "15b31d07e0ecb1995b8bae565162ba5a4ecb342d99ec2a223acac7ed7f52d5b8"
+      sha256 "cc69576cdf072f124193d923ed06389a4ae05bcfec6bd9dbfeffb5da0a0e8f2d"
     end
   elsif OS.linux?
       ohdie "Linux not supported by this formula"
