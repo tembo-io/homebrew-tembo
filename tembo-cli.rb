@@ -3,18 +3,18 @@ class TemboCli < Formula
   homepage "https://github.com/tembo-io/tembo/tree/main/tembo-cli"
   version "0.20.5"
   @@filename = nil
-  @@release_version = "2024.05.14"
+  @@release_version = "2024.05.23"
   if OS.mac?
 
     uname = `/usr/bin/uname -m`
     if uname.strip == "arm64"
       @@filename = "tembo-cli-#{version}-aarch64-apple.tar.gz"
       url "https://github.com/tembo-io/tembo/releases/download/#{@@release_version}/#{@@filename}"
-      sha256 "168e8de3213f918416ab55f2340e3aee12fad137247f5ac96357d60ebe296330"
+      sha256 "267dc97458b8ffa940ff248db8903bc076858f7a19004588e80230e38d969f6d"
     else
       @@filename = "tembo-cli-#{version}-x86_64-apple.tar.gz"
       url "https://github.com/tembo-io/tembo/releases/download/#{@@release_version}/#{@@filename}"
-      sha256 "d3c748cf03c2f2975198b4920e41290a2327f4b0c1967891f0399417a3753c3f"
+      sha256 "b1dca5eeb7e3e7005131f7aaee35f2709950c6f3bd7ad126fe7ad60d4d88ccd8"
     end
   elsif OS.linux?
       ohdie "Linux not supported by this formula"
