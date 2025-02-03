@@ -1,20 +1,20 @@
 class TemboCli < Formula
   desc "Tembo CLI allows users to experience Tembo locally, as well as, manage and deploy to Tembo Cloud."
   homepage "https://github.com/tembo-io/tembo/tree/main/tembo-cli"
-  version "0.20.8"
+  version "0.21.1"
   @@filename = nil
-  @@release_version = "2024.11.20"
+  @@release_version = "2025.02.03"
   if OS.mac?
 
     uname = `/usr/bin/uname -m`
     if uname.strip == "arm64"
       @@filename = "tembo-cli-#{version}-aarch64-apple.tar.gz"
       url "https://github.com/tembo-io/tembo/releases/download/#{@@release_version}/#{@@filename}"
-      sha256 "6836afcf88291b555f0a225ddcd2cf7355aee24dc8ef2ea827e5f878adc1deee"
+      sha256 "a1ead17586c704287a58c963c0cdaca6401fa37bc3b9bc0c6c10b44debc51d8d"
     else
       @@filename = "tembo-cli-#{version}-x86_64-apple.tar.gz"
       url "https://github.com/tembo-io/tembo/releases/download/#{@@release_version}/#{@@filename}"
-      sha256 "004bc580fd1474eaab2f828e7557cbe7156d1c608e7467cb533840791bb03140"
+      sha256 "81ab1e2098b3dcedbe996fa1b403aadc22e9013b48932bb72d0644bf18c227f1"
     end
   elsif OS.linux?
       ohdie "Linux not supported by this formula"
